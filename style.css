@@ -1,0 +1,27 @@
+h1,
+p {
+  font-family: Lato;
+}
+
+.gameboard {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 80px);
+  background-color: #112d8f;
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-items: center;
+}
+
+.grid {
+  height: 74%;
+  width: 60%;
+  border-radius: 50%;
+}
+
+svg {
+  height: 50%;
+  width: 50%;
+}
