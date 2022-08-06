@@ -103,3 +103,7 @@ button:hover {
   opacity: 0.9;
   transform: translateY(-5px);
 }
+
+.end {
+  margin-bottom: 16px;
+}

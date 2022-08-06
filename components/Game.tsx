@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useState, useEffect } from 'react';
 
 export default function Game(props) {
-  const { playerName } = props;
+  const { playerName, setStart } = props;
 
   const [gameboard, setGameboard] = useState([
     [null, null, null, null, null, null, null],
@@ -151,6 +151,10 @@ export default function Game(props) {
     }
   }
 
+  function restartGame() {
+    setStart(false);
+  }
+
   return (
     <div className="container">
       {!end ? (
@@ -164,6 +168,9 @@ export default function Game(props) {
               ? 'Game over! Sorry, the ' + winner + ' won this time around 😔'
               : 'Game over! Congrats, ' + winner + '! You won the game! 🎉'}
           </h2>
+          <button type="button" onClick={restartGame}>
+            Play New Game
+          </button>
         </div>
       )}
       <div className="gameboard">

@@ -17,7 +17,7 @@ export default function App() {
           setStart={setStart}
         />
       ) : (
-        <Game playerName={playerName} />
+        <Game playerName={playerName} setStart={setStart} />
       )}
     </div>
   );
