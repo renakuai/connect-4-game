@@ -154,9 +154,17 @@ export default function Game(props) {
   return (
     <div className="container">
       {!end ? (
-        <div className="turn">{player.active + "'s turn"}</div>
+        <div className="turn">
+          <h2>{player.active + "'s turn"}</h2>
+        </div>
       ) : (
-        <div className="end">{'game over!' + winner + ' is the winner!'}</div>
+        <div className="end">
+          <h2>
+            {winner === 'computer'
+              ? 'Game over! Sorry, the ' + winner + ' won this time around 😔'
+              : 'Game over! Congrats, ' + winner + '! You won the game! 🎉'}
+          </h2>
+        </div>
       )}
       <div className="gameboard">
         {gameboard.map((row, rowIndex) =>

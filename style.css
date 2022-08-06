@@ -1,27 +1,105 @@
-h1,
-p {
-  font-family: Lato;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Karla:wght@400;600;800&display=swap');
+
+body {
+  font-family: 'Karla', sans-serif;
+  color: #34313a;
+}
+
+.content {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 32px 1fr 32px;
+  justify-items: center;
+  text-align: center;
+}
+
+.container,
+form {
+  display: flex;
+  flex-direction: column;
+  grid-column: 2/3;
+  width: 100%;
+  gap: 1rem;
+}
+
+.container {
+  align-items: center;
+}
+
+fieldset {
+  width: 50%;
 }
 
 .gameboard {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(6, 80px);
+  grid-template-rows: repeat(6, 1fr);
   background-color: #112d8f;
-  width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 660px;
+  height: 450px;
   align-items: center;
   justify-items: center;
+  border-radius: 8px;
 }
 
 .grid {
   height: 74%;
   width: 60%;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 svg {
   height: 50%;
   width: 50%;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+#start-form {
+  max-width: 500px;
+  text-align: left;
+}
+
+label,
+input {
+  font-size: 20px;
+}
+
+#question {
+  font-weight: 600;
+}
+
+input {
+  padding: 8px 12px 8px 12px;
+  border: 1px solid #d9d9d9;
+  font-family: 'Karla', sans-serif;
+}
+
+input[type='radio'] {
+  height: 16px;
+  width: 16px;
+}
+
+button {
+  margin-top: 16px;
+  padding: 8px 12px 8px 12px;
+  border: none;
+  background-color: #175fcb;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 250ms;
+  border-radius: 4px;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-5px);
 }
