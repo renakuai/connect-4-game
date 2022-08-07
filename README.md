@@ -1,3 +1,3 @@
 # react-ts-knfkhh
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-ts-knfkhh)
+A Connect 4 game built in React / Typescript
