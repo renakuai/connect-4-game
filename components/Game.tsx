@@ -170,9 +170,6 @@ export default function Game(props) {
           </h2>
         </div>
       )}
-      <button type="button" onClick={restartGame}>
-        Play New Game
-      </button>
       <div className="gameboard">
         {gameboard.map((row, rowIndex) =>
           gameboard[rowIndex].map((col, colIndex) => (
@@ -188,6 +185,9 @@ export default function Game(props) {
           ))
         )}
       </div>
+      {!end && <button type="button" onClick={restartGame}>
+        Play New Game
+      </button>}
     </div>
   );
 }
