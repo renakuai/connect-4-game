@@ -168,6 +168,9 @@ export default function Game(props) {
               ? 'Game over! Sorry, the ' + winner + ' won this time around 😔'
               : 'Game over! Congrats, ' + winner + '! You won the game! 🎉'}
           </h2>
+          <button type="button" onClick={restartGame}>
+            Play Again!
+          </button>
         </div>
       )}
       <div className="gameboard">
@@ -185,9 +188,11 @@ export default function Game(props) {
           ))
         )}
       </div>
-      {!end && <button type="button" onClick={restartGame}>
-        Play New Game
-      </button>}
+      {!end && (
+        <button type="button" onClick={restartGame}>
+          Play New Game
+        </button>
+      )}
     </div>
   );
 }
